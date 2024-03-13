@@ -119,12 +119,9 @@ fun MovieList(
     ){
     LazyColumn(modifier = modifier) {
         items(movies) { movie ->
-
-            MovieRow(
-                movie = movie,
-                onItemClick = { movieId ->
-                    navController.navigate("detailscreen/$movieId")
-            })
+            MovieRow(movie = movie){ movieId ->
+                navController.navigate("detailscreen/$movieId")
+            }
         }
     }
 }
@@ -146,7 +143,6 @@ fun MovieRow(
         Column {
 
             MovieCardHeader(imageUrl = movie.images[0])
-
 
             MovieDetails(modifier = Modifier.padding(12.dp), movie = movie)
 
