@@ -119,17 +119,21 @@ fun MovieList(
     ){
     LazyColumn(modifier = modifier) {
         items(movies) { movie ->
-            MovieRow(movie) {movieId ->
-                // Log.d("MovieList", "My callback value: $movieId")
 
-                navController.navigate(route = "detailscreen/$movieId")
-            }
+            MovieRow(
+                movie = movie,
+                onItemClick = { movieId ->
+                    navController.navigate("detailscreen/$movieId")
+            })
         }
     }
 }
 
 @Composable
-fun MovieRow(movie: Movie, onItemClick: (String) -> Unit = {}){
+fun MovieRow(
+    movie: Movie,
+    onItemClick: (String) -> Unit = {}
+    ){
     Card(modifier = Modifier
         .fillMaxWidth()
         .padding(5.dp)

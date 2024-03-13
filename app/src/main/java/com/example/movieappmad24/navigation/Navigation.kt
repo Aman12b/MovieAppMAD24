@@ -15,6 +15,7 @@ fun Navigation() {
 
     NavHost(navController = navController, // pass the NavController to NavHost
         startDestination = "homescreen") {  // pass a start destination
+
         composable(route = "homescreen"){   // route with name "homescreen" navigates to HomeScreen composable
             HomeScreen(navController = navController)
         }
