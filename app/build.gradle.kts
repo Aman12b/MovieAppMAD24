@@ -54,6 +54,7 @@ android {
 }
 
 dependencies {
+    implementation("com.android.volley:volley:1.2.1")
     // versions
     val nav_version = "2.7.7"
 
