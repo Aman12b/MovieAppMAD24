@@ -54,13 +54,15 @@ android {
 }
 
 dependencies {
+    implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
+    implementation("androidx.media3:media3-ui:1.3.1")
     // versions
     val nav_version = "2.7.7"
     val lifecycle_version = "2.7.0"
 
     // ViewModel utilities for Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
-
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.0")
