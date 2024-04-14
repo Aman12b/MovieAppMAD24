@@ -1,0 +1,29 @@
+package com.example.movieappmad24.components.moviefunctions
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ShapeDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.example.movieappmad24.models.Movie
+
+@Composable
+fun MovieRow(movie: Movie, onClick: (String) -> Unit = {}){
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .padding(5.dp)
+        .clickable { onClick(movie.id) },
+        shape = ShapeDefaults.Large,
+        elevation = CardDefaults.cardElevation(10.dp)
+    ) {
+        Column {
+            MovieCardHeader(imageUrl = movie.images[0])
+            MovieCard(modifier = Modifier.padding(12.dp), movie = movie)
+        }
+    }
+}
