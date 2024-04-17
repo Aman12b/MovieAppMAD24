@@ -22,8 +22,8 @@ fun BottomBar(navController: NavController) {
     NavigationBar {
         NavigationBarItem(
             label = { Text("Home") },
-            selected = currentRoute == Screen.Home.route,
-            onClick = { navController.navigate(Screen.Home.route) },
+            selected = currentRoute == Screen.HomeScreen.route,
+            onClick = { navController.navigate(Screen.HomeScreen.route) },
             icon = { Icon(
                 imageVector = Icons.Filled.Home,
                 contentDescription = "Go to home"
@@ -31,8 +31,8 @@ fun BottomBar(navController: NavController) {
         )
         NavigationBarItem(
             label = { Text("Watchlist") },
-            selected = currentRoute == Screen.Watchlist.route,
-            onClick = { navController.navigate(Screen.Watchlist.route) },
+            selected = currentRoute == Screen.WatchlistScreen.route,
+            onClick = { navController.navigate(Screen.WatchlistScreen.route) },
             icon = { Icon(
                 imageVector = Icons.Filled.Star,
                 contentDescription = "Go to watchlist"

@@ -271,7 +271,6 @@ fun MoviePlayer(movie: Movie){
         ExoPlayer.Builder(context).build().apply{
             setMediaItem(mediaItem)
             prepare()
-            //playWhenReady = true
         }
     }
     val lifecycleOwner = LocalLifecycleOwner.current

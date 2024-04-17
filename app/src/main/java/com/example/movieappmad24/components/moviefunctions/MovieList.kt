@@ -16,7 +16,7 @@ fun MovieList(modifier: Modifier, movies: List<Movie> = getMovies(), navControll
         items(movies) { movie ->
             if(filter(movie)) {
                 MovieRow(movie) { movieId ->
-                    navController.navigate(Screen.Detail.transferMovieID(movieId))
+                    navController.navigate(Screen.DetailScreen.withId(movieId))
                 }
             }
         }
